@@ -1,5 +1,5 @@
 -- 부서 타입 생성
-CREATE TYPE department_type AS ENUM ('기획과', '기술과', '활용팀');
+CREATE TYPE department_type AS ENUM ('수치예보기획과', '수치예보기술과', '수치예보활용팀');
 
 -- profiles 테이블 (Supabase Auth 연동)
 CREATE TABLE profiles (

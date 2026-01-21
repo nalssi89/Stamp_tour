@@ -87,7 +87,7 @@ lunch-roulette/
 | id | UUID (PK) | auth.users 연동 |
 | name | VARCHAR(50) | 이름 |
 | email | VARCHAR(255) | 이메일 |
-| department | ENUM | 기획과, 기술과, 활용팀 |
+| department | ENUM | 수치예보기획과, 수치예보기술과, 수치예보활용팀 |
 | employee_number | VARCHAR(20) | 사번 |
 | is_active | BOOLEAN | 활성 상태 |
 | is_admin | BOOLEAN | 관리자 여부 |

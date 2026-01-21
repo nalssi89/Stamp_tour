@@ -1,5 +1,5 @@
 // 부서 목록
-export const DEPARTMENTS = ['기획과', '기술과', '활용팀']
+export const DEPARTMENTS = ['수치예보기획과', '수치예보기술과', '수치예보활용팀']
 
 // 매칭 상태
 export const MATCH_STATUS = {

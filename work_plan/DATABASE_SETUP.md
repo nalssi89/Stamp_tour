@@ -9,7 +9,7 @@
 -- 1. 타입 생성
 -- ============================================
 
-CREATE TYPE department_type AS ENUM ('기획과', '기술과', '활용팀');
+CREATE TYPE department_type AS ENUM ('수치예보기획과', '수치예보기술과', '수치예보활용팀');
 CREATE TYPE match_status AS ENUM ('pending', 'matched', 'cancelled');
 CREATE TYPE point_reason AS ENUM (
   'match_request',
@@ -178,12 +178,12 @@ SELECT id, email, name, department, is_admin FROM profiles;
 ```sql
 -- 테스트용 부서별 사용자 추가 (프로필만 - 실제 로그인은 불가)
 INSERT INTO profiles (id, name, email, department, is_active) VALUES
-  (gen_random_uuid(), '김기획', 'kim@test.com', '기획과', true),
-  (gen_random_uuid(), '이기획', 'lee@test.com', '기획과', true),
-  (gen_random_uuid(), '박기술', 'park@test.com', '기술과', true),
-  (gen_random_uuid(), '최기술', 'choi@test.com', '기술과', true),
-  (gen_random_uuid(), '정활용', 'jung@test.com', '활용팀', true),
-  (gen_random_uuid(), '한활용', 'han@test.com', '활용팀', true);
+  (gen_random_uuid(), '김기획', 'kim@test.com', '수치예보기획과', true),
+  (gen_random_uuid(), '이기획', 'lee@test.com', '수치예보기획과', true),
+  (gen_random_uuid(), '박기술', 'park@test.com', '수치예보기술과', true),
+  (gen_random_uuid(), '최기술', 'choi@test.com', '수치예보기술과', true),
+  (gen_random_uuid(), '정활용', 'jung@test.com', '수치예보활용팀', true),
+  (gen_random_uuid(), '한활용', 'han@test.com', '수치예보활용팀', true);
 ```
 
 ---

@@ -288,16 +288,35 @@ UPDATE profiles SET is_admin = true WHERE email = 'admin@example.com';
 
 ---
 
+## 자동 매칭 설정 (완료)
+
+매일 오전 11시(KST)에 자동으로 매칭이 실행됩니다.
+
+### 구성 요소
+- **Edge Function**: `auto-match` (Supabase에 배포됨)
+- **pg_cron**: 매일 UTC 02:00 (KST 11:00) 실행
+- **pg_net**: HTTP 호출용 확장
+
+### 동작 흐름
+1. 직원들이 11시 전까지 매칭 신청
+2. 11시에 pg_cron이 Edge Function 자동 호출
+3. 타과 교류 우선 알고리즘으로 3-4명 그룹 생성
+4. 직원들이 앱에서 매칭 결과 확인
+
+자세한 설정은 [AUTO_MATCHING_SETUP.md](./AUTO_MATCHING_SETUP.md) 참고
+
+---
+
 ## 추후 개선 사항
 
 1. RLS 정책 재설정 및 활성화
 2. 포인트 자동 적립 로직 구현 (Edge Functions)
 3. 푸시 알림 (매칭 결과, 점심 시간 알림)
-4. 실제 도메인 배포 및 Site URL 설정
+4. Supabase Site URL에 Vercel URL 등록
 5. 사진 업로드 최적화 (리사이징)
 6. 매칭 히스토리 기반 중복 방지
 
 ---
 
 ## 작성일
-2026년 1월 18일
+2026년 1월 21일 (최종 업데이트)
